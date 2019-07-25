@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.kylinapp.dao.ITAB_WxArticleDAO">
+
+
+
+
+	<select id="getArticleList" resultType="TAB_WXARTICLE"
+		parameterType="Map">
+		select a.id as id,
+		a.title as title,
+		a.createtimestamp as timestamp,
+		a.iconurl as imgurl, 
+		(select count(*) from tab_wxarticlelike l where l.articleid = a.id and l.flag != 0) as likes,
+		(select count(*) from tab_wxarticlepageview p where p.articleid = a.id) as pageViews,
+		(select count(*) from tab_wxarticlemessage am where am.articleid = a.id) as messageCount
+		from tab_wxarticle a  
+		where 1=1
+		<if test="articleid != null and articleid != ''" >
+        and a.id = #{articleid,jdbcType=VARCHAR}
+        </if>
+        <if test="categoryid != null and categoryid != ''" >
+        and categoryid = #{categoryid,jdbcType=VARCHAR}
+        </if>
+		
+	</select>
+
+
+
+
+</mapper>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.kylinapp.dao.ITAB_WxArticlelikeDAO">
+
+<select id="getWxArticleLikeList" resultType="TAB_WxArticleLike"
+		parameterType="Map">
+		select 
+		* 
+		from 
+		tab_wxarticlelike 
+		where 1=1 
+		<if test="articleid != null and articleid != ''" >
+        and articleid = #{articleid,jdbcType=VARCHAR}
+        </if>
+        <if test="flag != null and flag != ''" >
+        and flag = #{flag,jdbcType=VARCHAR}
+        </if>
+	</select>
+
+<insert id="userLikeArticle" parameterType="Map">
+    insert into tab_wxarticlelike
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="articleid != null">
+        articleid,
+      </if>
+      <if test="openid != null">
+        openid,
+      </if>
+      <if test="username != null">
+        username,
+      </if>
+      <if test="usericonurl != null">
+        usericonurl,
+      </if>
+      <if test="timestamp != null">
+        timestamp,
+      </if>
+      <if test="time != null">
+        time,
+      </if>
+      <if test="flag != null">
+        flag,
+      </if>
+      
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="articleid != null">
+        #{articleid,jdbcType=INTEGER},
+      </if>
+      <if test="openid != null">
+        #{openid,jdbcType=VARCHAR},
+      </if>
+      <if test="username != null">
+        #{username,jdbcType=CHAR},
+      </if>
+      <if test="usericonurl != null">
+        #{usericonurl,jdbcType=VARCHAR},
+      </if>
+      <if test="timestamp != null">
+        #{timestamp,jdbcType=VARCHAR},
+      </if>
+      <if test="time != null">
+        #{time,jdbcType=VARCHAR},
+      </if>
+      <if test="flag != null">
+        #{flag,jdbcType=INTEGER},
+      </if>
+     
+    </trim>
+  </insert>
+  
+  <update id="userUnLikeArticle" parameterType="Map">
+    update tab_wxarticlelike
+    <set>
+      <if test='timestamp != null and timestamp !=""'>
+        timestamp = #{timestamp,jdbcType=VARCHAR},
+      </if>
+      <if test='time != null and time !=""'>
+        time = #{time,jdbcType=VARCHAR},
+      </if>
+      <if test="flag != null">
+        flag = #{flag,jdbcType=INTEGER},
+      </if>
+      
+    </set>
+    where articleid = #{articleid,jdbcType=INTEGER} and openid = #{openid,jdbcType=VARCHAR}
+  </update>
+
+
+</mapper>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.kylinapp.dao.ITAB_WXAPPUSERDAO">
+
+
+
+
+	<update id="insertOrUpdateWxappuser" parameterType="Map">
+		INSERT INTO
+		tab_wxappuser
+		(createtime,uname,uavatar,sessionkey,ugender,uuid,uid,ubalance,createtimestamp,skey,updatetimestamp,updatetime,uaddress)
+		VALUES
+		(
+		#{createtime,jdbcType=VARCHAR},
+		#{uname,jdbcType=VARCHAR},
+		#{uavatar,jdbcType=VARCHAR},
+		#{sessionkey,jdbcType=VARCHAR},
+		#{ugender,jdbcType=INTEGER},
+		#{uuid,jdbcType=VARCHAR},
+		#{uid,jdbcType=VARCHAR},
+		#{ubalance,jdbcType=INTEGER},
+		#{createtimestamp,jdbcType=VARCHAR},
+		#{skey,jdbcType=VARCHAR},
+		#{updatetimestamp,jdbcType=VARCHAR},
+		#{updatetime,jdbcType=VARCHAR},
+		#{uaddress,jdbcType=VARCHAR}
+		)
+		ON DUPLICATE KEY UPDATE
+		uname = VALUES(uname),
+		uavatar = VALUES(uavatar),
+		sessionkey = VALUES(sessionkey),
+		ugender = VALUES(ugender),
+		uid =
+		VALUES(uid),
+		ubalance = VALUES(ubalance),
+		skey = VALUES(skey),
+		updatetimestamp = VALUES(updatetimestamp),
+		updatetime =
+		VALUES(updatetime),
+		uaddress = VALUES(uaddress)
+
+	</update>
+
+
+
+
+</mapper>

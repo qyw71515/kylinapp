@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.kylinapp.dao.ITab_OCRDAO">
+
+
+<sql id="fragment_OCR">
+		<if test="id!=null and id !=''">
+			and id = #{id}
+		</if>
+
+
+	</sql>
+
+
+	<insert id="insert" parameterType="Map">
+		insert into TAB_OCR
+		(username,usericonurl,cjsj,code,message,img)
+		values (
+		#{username,jdbcType=VARCHAR},
+		#{usericonurl,jdbcType=VARCHAR},
+		#{cjsj,jdbcType=VARCHAR},
+		#{code,jdbcType=VARCHAR},
+		#{message,jdbcType=VARCHAR},
+		#{img,jdbcType=BLOB}
+		)
+	</insert>
+
+	<select id="getImgList" resultType="TAB_OCR" parameterType="Map">
+		select *
+		from TAB_OCR where 1=1
+		<include refid="fragment_OCR" />
+	</select>
+
+</mapper>

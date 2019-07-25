@@ -1,0 +1,346 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://ws.aisino.jx.com" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="zzkpWebservice" targetNamespace="http://ws.aisino.jx.com">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://ws.aisino.jx.com" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://ws.aisino.jx.com">
+  <xs:element name="fpkjInvoice" type="tns:fpkjInvoice"/>
+  <xs:element name="fpkjInvoiceResponse" type="tns:fpkjInvoiceResponse"/>
+  <xs:element name="invalidBlankInvoice" type="tns:invalidBlankInvoice"/>
+  <xs:element name="invalidBlankInvoiceResponse" type="tns:invalidBlankInvoiceResponse"/>
+  <xs:element name="invalidInvoice" type="tns:invalidInvoice"/>
+  <xs:element name="invalidInvoiceResponse" type="tns:invalidInvoiceResponse"/>
+  <xs:element name="issueInvoice" type="tns:issueInvoice"/>
+  <xs:element name="issueInvoiceResponse" type="tns:issueInvoiceResponse"/>
+  <xs:element name="printInvoice" type="tns:printInvoice"/>
+  <xs:element name="printInvoiceResponse" type="tns:printInvoiceResponse"/>
+  <xs:element name="printList" type="tns:printList"/>
+  <xs:element name="printListResponse" type="tns:printListResponse"/>
+  <xs:element name="queryInventory" type="tns:queryInventory"/>
+  <xs:element name="queryInventoryResponse" type="tns:queryInventoryResponse"/>
+  <xs:element name="uploadRedInfo" type="tns:uploadRedInfo"/>
+  <xs:element name="uploadRedInfoResponse" type="tns:uploadRedInfoResponse"/>
+  <xs:complexType name="queryInventory">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="in0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="queryInventoryResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="out" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="printList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="in0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="printListResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="out" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="printInvoice">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="in0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="printInvoiceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="out" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="invalidInvoice">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="in0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="invalidInvoiceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="out" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="fpkjInvoice">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="in0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="fpkjInvoiceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="out" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="uploadRedInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="in0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="uploadRedInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="out" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="issueInvoice">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="in0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="issueInvoiceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="out" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="invalidBlankInvoice">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="in0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="invalidBlankInvoiceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="out" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Exception" type="tns:Exception"/>
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="invalidBlankInvoice">
+    <wsdl:part element="tns:invalidBlankInvoice" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="fpkjInvoice">
+    <wsdl:part element="tns:fpkjInvoice" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="fpkjInvoiceResponse">
+    <wsdl:part element="tns:fpkjInvoiceResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="invalidBlankInvoiceResponse">
+    <wsdl:part element="tns:invalidBlankInvoiceResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="issueInvoice">
+    <wsdl:part element="tns:issueInvoice" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="issueInvoiceResponse">
+    <wsdl:part element="tns:issueInvoiceResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryInventoryResponse">
+    <wsdl:part element="tns:queryInventoryResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="printListResponse">
+    <wsdl:part element="tns:printListResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="printList">
+    <wsdl:part element="tns:printList" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="invalidInvoiceResponse">
+    <wsdl:part element="tns:invalidInvoiceResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="uploadRedInfoResponse">
+    <wsdl:part element="tns:uploadRedInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryInventory">
+    <wsdl:part element="tns:queryInventory" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="printInvoice">
+    <wsdl:part element="tns:printInvoice" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="printInvoiceResponse">
+    <wsdl:part element="tns:printInvoiceResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="uploadRedInfo">
+    <wsdl:part element="tns:uploadRedInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Exception">
+    <wsdl:part element="tns:Exception" name="Exception">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="invalidInvoice">
+    <wsdl:part element="tns:invalidInvoice" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="WebServicePortType">
+    <wsdl:operation name="queryInventory">
+      <wsdl:input message="tns:queryInventory" name="queryInventory">
+    </wsdl:input>
+      <wsdl:output message="tns:queryInventoryResponse" name="queryInventoryResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:Exception" name="Exception">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="printList">
+      <wsdl:input message="tns:printList" name="printList">
+    </wsdl:input>
+      <wsdl:output message="tns:printListResponse" name="printListResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:Exception" name="Exception">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="printInvoice">
+      <wsdl:input message="tns:printInvoice" name="printInvoice">
+    </wsdl:input>
+      <wsdl:output message="tns:printInvoiceResponse" name="printInvoiceResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:Exception" name="Exception">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="invalidInvoice">
+      <wsdl:input message="tns:invalidInvoice" name="invalidInvoice">
+    </wsdl:input>
+      <wsdl:output message="tns:invalidInvoiceResponse" name="invalidInvoiceResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:Exception" name="Exception">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="fpkjInvoice">
+      <wsdl:input message="tns:fpkjInvoice" name="fpkjInvoice">
+    </wsdl:input>
+      <wsdl:output message="tns:fpkjInvoiceResponse" name="fpkjInvoiceResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:Exception" name="Exception">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="uploadRedInfo">
+      <wsdl:input message="tns:uploadRedInfo" name="uploadRedInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:uploadRedInfoResponse" name="uploadRedInfoResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:Exception" name="Exception">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="issueInvoice">
+      <wsdl:input message="tns:issueInvoice" name="issueInvoice">
+    </wsdl:input>
+      <wsdl:output message="tns:issueInvoiceResponse" name="issueInvoiceResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:Exception" name="Exception">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="invalidBlankInvoice">
+      <wsdl:input message="tns:invalidBlankInvoice" name="invalidBlankInvoice">
+    </wsdl:input>
+      <wsdl:output message="tns:invalidBlankInvoiceResponse" name="invalidBlankInvoiceResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:Exception" name="Exception">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="zzkpWebserviceSoapBinding" type="tns:WebServicePortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="printInvoice">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="printInvoice">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="printInvoiceResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="printList">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="printList">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="printListResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="queryInventory">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="queryInventory">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="queryInventoryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="fpkjInvoice">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="fpkjInvoice">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="fpkjInvoiceResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="invalidInvoice">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="invalidInvoice">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="invalidInvoiceResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="issueInvoice">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="issueInvoice">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="issueInvoiceResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="uploadRedInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="uploadRedInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="uploadRedInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="invalidBlankInvoice">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="invalidBlankInvoice">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="invalidBlankInvoiceResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="zzkpWebservice">
+    <wsdl:port binding="tns:zzkpWebserviceSoapBinding" name="WebServiceHttpPort">
+      <soap:address location="http://117.41.253.139:9001/fpzx/ws/zzkpWebservice"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

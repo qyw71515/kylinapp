@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.kylinapp.dao.ITAB_WXBLOGCATEGORYDAO">
+
+
+
+
+	<select id="getBolgCategoryList" resultType="TAB_WXBLOGCATEGORY"
+		parameterType="Map">
+		select c.id,
+		c.name as categoryName,
+		c.iconurl as categoryIcon,
+		c.description as categoryDescription, 
+		(select count(*) from tab_wxarticle a where a.categoryID = c.id) as articleTotle,
+		c.type as type
+		from TAB_WXBLOGCATEGORY c where 1=1
+		<if test="id != null and id != ''" >
+        and id = #{id,jdbcType=VARCHAR}
+        </if>
+		
+	</select>
+
+
+
+
+</mapper>
